@@ -1,24 +1,14 @@
-// tuodaan Scanner-apuväline
-import java.util.Scanner;
-
 public class LukujenSumma {
 
-    public static void main(String[] args) {
-        // luodaan Scanner-apuväline
-        Scanner lukija = new Scanner(System.in);
-
-        // luodaan muuttuja
-        int summa = 0;
+    public static int summa(int luku1, int luku2, int luku3, int luku4) {
+        // kirjoita koodia tähän
+        int apu = luku1 + luku2 + luku3 + luku4;
         
-        // luodaan toistolause
-        while (true) {
-            int luku = Integer.valueOf(lukija.nextLine());
-            if (luku == 0){
-            System.out.println(summa);
-            break;
-            } else {
-                summa = summa + luku;
-            }
-        }
+        return apu;
+    }
+
+    public static void main(String[] args) {
+        int vastaus = summa(4, 3, 6, 1);
+        System.out.println("Summa: " + vastaus);
     }
 }
