@@ -1,27 +1,20 @@
 
-import java.util.Scanner;
-
 public class LukujenKeskiarvo {
 
-    public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
-
-        //Ohjelma alkaa
-        double keskiarvo =0;
-        double lukumaara = 0;
-        double summa = 0;
-    while (true) {
-        System.out.println("Syötä luku");
-        int luku = Integer.valueOf(lukija.nextLine());
-        if (luku == 0){
-            break;
-        }
-        else {
-            lukumaara = lukumaara + 1;
-            summa = summa + luku;
-            keskiarvo = summa/lukumaara;
-        }
+    // toteuta tähän uudelleen aiemmin tekemäsi summametodi
+    public static int summa(int luku1, int luku2, int luku3, int luku4) {
+        // kirjoita koodia tähän
+        int apu = luku1 + luku2 + luku3 + luku4;
+        return apu;
     }
-    System.out.println("Lukujen keskiarvo " + keskiarvo);
+
+    public static double keskiarvo(int luku1, int luku2, int luku3, int luku4) {
+        double keskiarvo = 1.0 * summa(luku1, luku2, luku3, luku4) / 4;
+        return keskiarvo;
+    }
+
+    public static void main(String[] args) {
+        double vastaus = keskiarvo(4, 3, 6, 1);
+        System.out.println("Keskiarvo: " + vastaus);
     }
 }
