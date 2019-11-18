@@ -1,21 +1,21 @@
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MerkkijonojenLukumaara {
+public class Kuutiot {
 
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
-        ArrayList<String> merkkijonot = new ArrayList<>();
-        
+
         while (true) {
             String mjono = lukija.nextLine();
-            merkkijonot.add(mjono);
             
             if (mjono.equals("loppu")) {
                 break;
             }
+            else {
+                int luku = Integer.valueOf(mjono);
+                System.out.println(luku * luku * luku);
+            }
         }
-        System.out.println(merkkijonot.size() - 1);
     }
 }
